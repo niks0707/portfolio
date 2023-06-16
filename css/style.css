@@ -64,8 +64,8 @@ ul
     margin: auto;
 }
 .section .container{
-    padding-top: 60px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 200px;
 }
 .section-title
 {
@@ -307,27 +307,25 @@ h3.my-proffesion
     text-align: center;
     position: relative;
 }
-.home-image::before
-{
+.home-image::before {
     content: '';
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: 20px;
-    top: -40px;
+    left: 60px;
+    top: 0px;
 }
-.home-image::after
-{
+.home-image::after {
     content: '';
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
+    right: 60px;
+    bottom: 20px;
 }
 .home .home-image img
 {
@@ -698,7 +696,9 @@ h3.my-proffesion
     }
     .home .home-image
     {
-        display: none;
+        position: absolute;
+        top: 250px;
+        right: 0px;
     }
 }
 @media (max-width:767px)
@@ -713,5 +713,50 @@ h3.my-proffesion
     {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+@media (max-width:500px){
+    .home .home-image
+    {
+        position: absolute;
+        top: 350px;
+        right: 0px;
+    }
+
+    .home-image::before {
+        content: '';
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        left: 20px;
+        top: 0px;
+    }
+    .home-image::after {
+        content: '';
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .home .home-image img
+    {
+        margin: auto;
+        border-radius: 5px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width:420px){
+    .home .home-image
+    {
+        display: none;
     }
 }
